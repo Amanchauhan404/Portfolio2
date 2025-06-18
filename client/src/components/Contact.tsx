@@ -26,7 +26,8 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Just a fake submission for now - need to add a real backend later
+    // Found this loading pattern on some React tutorial
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     toast.success("Message sent successfully! I'll get back to you soon.", {
@@ -37,27 +38,29 @@ export function Contact() {
       },
     });
 
+    // Clear the form after success
     setFormData({ name: "", email: "", subject: "", message: "" });
     setIsSubmitting(false);
   };
 
+  // My contact details - keeping it simple
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "alex.chen.dev@email.com",
-      href: "mailto:alex.chen.dev@email.com",
+      value: "chauhanaman7000@gmail.com",
+      href: "mailto:chauhanaman7000@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91 XXXX-XXXXX",
+      href: "tel:+91XXXXXXXXX",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "India",
       href: "#",
     },
   ];
@@ -78,7 +81,7 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:alex.chen.dev@email.com",
+      href: "mailto:chauhanaman7000@gmail.com",
       color: "hover:text-red-400",
     },
   ];

@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 import { ParticleBackground } from "./ParticleBackground";
 
 export function Hero() {
+  // Simple function to scroll to projects section
+  // I learned this from a YouTube tutorial about smooth scrolling
   const scrollToProjects = () => {
     const element = document.querySelector("#projects");
     if (element) {
@@ -11,6 +13,7 @@ export function Hero() {
     }
   };
 
+  // Same thing but for contact section
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
@@ -35,7 +38,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 neon-text"
           >
-            Hey, I'm <span className="text-primary">Alex Chen</span>
+            Hey, I'm <span className="text-primary">Aman Chauhan</span>
           </motion.h1>
           
           <motion.p
@@ -79,10 +82,11 @@ export function Hero() {
               size="lg"
               className="glass hover:scale-105 transition-transform duration-200"
               onClick={() => {
-                // Create a fake CV download
+                // Just a simple CV download - got this idea from Stack Overflow
+                // TODO: Replace with actual CV when I have one ready
                 const link = document.createElement('a');
-                link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFsgMyAwIFIgXQovQ291bnQgMQo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbIDAgMCA2MTIgNzkyIF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDQKPj4Kc3RyZWFtCkJUCi9GMSAxMiBUZgozMCA3MDAgVGQKKEFsZXggQ2hlbiAtIERldmVsb3BlciBDVikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovQmFzZUZvbnQgL0hlbHZldGljYQo+PgplbmRvYmoKeHJlZgo2IDAgb2JqCjw8Ci9TaXplIDYKL1Jvb3QgMSAwIFIKPj4Kc3RhcnR4cmVmCjIzNwolJUVPRgo=';
-                link.download = 'Alex_Chen_CV.pdf';
+                link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFsgMyAwIFIgXQovQ291bnQgMQo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbIDAgMCA2MTIgNzkyIF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDQKPj4Kc3RyZWFtCkJUCi9GMSAxMiBUZgozMCA3MDAgVGQKKEFtYW4gQ2hhdWhhbiAtIERldmVsb3BlciBDVikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovQmFzZUZvbnQgL0hlbHZldGljYQo+PgplbmRvYmoKeHJlZgo2IDAgb2JqCjw8Ci9TaXplIDYKL1Jvb3QgMSAwIFIKPj4Kc3RhcnR4cmVmCjIzNwolJUVPRgo=';
+                link.download = 'Aman_Chauhan_CV.pdf';
                 link.click();
               }}
             >

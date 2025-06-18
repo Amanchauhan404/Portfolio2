@@ -3,29 +3,30 @@ import { Code, Rocket, Zap, Brain } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 export function About() {
+  // My coding journey - these are the major milestones I remember
   const timeline = [
     {
       year: "2020",
       title: "Started Coding Journey",
-      description: "Fell in love with creating digital experiences",
+      description: "Got curious about websites and started with HTML/CSS tutorials",
       icon: <Code className="h-5 w-5" />,
     },
     {
-      year: "2021",
+      year: "2021", 
       title: "First React Project",
-      description: "Built my first SPA and discovered component-based architecture",
+      description: "Built my first single page app - was mind blown by components!",
       icon: <Rocket className="h-5 w-5" />,
     },
     {
       year: "2022",
-      title: "Mastered Modern Stack",
-      description: "Deep dive into TypeScript, Next.js, and Three.js",
+      title: "Learned Modern Tools",
+      description: "Started using TypeScript and Next.js for bigger projects",
       icon: <Zap className="h-5 w-5" />,
     },
     {
       year: "2023",
-      title: "AI Integration Expert",
-      description: "Specialized in integrating AI/ML into web applications",
+      title: "AI Integration",
+      description: "Got into AI APIs and started building smarter web apps",
       icon: <Brain className="h-5 w-5" />,
     },
   ];
@@ -63,38 +64,38 @@ export function About() {
                   <div className="w-24 h-24 rounded-full overflow-hidden glass border-4 border-primary/50">
                     <img
                       src="https://pixabay.com/get/gb81f147295c2c0513c2eb638f34480995d929b6ea276a8cee5911bd27edc265077b663d230ab6bfcfacab08b7f2964e3f904a76c17a1d909cdcad2118ea06d18_1280.jpg"
-                      alt="Alex Chen"
+                      alt="Aman Chauhan"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary">Alex Chen</h3>
+                    <h3 className="text-2xl font-bold text-primary">Aman Chauhan</h3>
                     <p className="text-foreground/80">Frontend Developer & AI Enthusiast</p>
                   </div>
                 </div>
                 
                 <p className="text-foreground/80 leading-relaxed">
-                  I'm a passionate frontend developer who loves pushing the boundaries of what's possible on the web. 
-                  My journey started with curiosity about how websites work, and it evolved into a deep fascination 
-                  with creating immersive, AI-powered user experiences.
+                  Hey there! I'm Aman, a frontend developer who really enjoys building cool stuff on the web. 
+                  Started out just being curious about how websites worked, and now I'm into creating modern 
+                  interfaces with some AI features thrown in. Always learning something new!
                 </p>
                 
                 <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-primary font-semibold">Location:</span>
-                    <p className="text-foreground/80">San Francisco, CA</p>
+                    <p className="text-foreground/80">India</p>
                   </div>
                   <div>
                     <span className="text-primary font-semibold">Experience:</span>
-                    <p className="text-foreground/80">4+ Years</p>
+                    <p className="text-foreground/80">3+ Years</p>
                   </div>
                   <div>
-                    <span className="text-primary font-semibold">Specialization:</span>
-                    <p className="text-foreground/80">React & Three.js</p>
+                    <span className="text-primary font-semibold">Favorite Tech:</span>
+                    <p className="text-foreground/80">React & Next.js</p>
                   </div>
                   <div>
-                    <span className="text-primary font-semibold">Passion:</span>
-                    <p className="text-foreground/80">AI Integration</p>
+                    <span className="text-primary font-semibold">Currently Learning:</span>
+                    <p className="text-foreground/80">Three.js & AI APIs</p>
                   </div>
                 </div>
               </CardContent>
