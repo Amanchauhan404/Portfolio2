@@ -33,7 +33,7 @@ export function Footer() {
       links: [
         { name: "GitHub", href: "https://github.com" },
         { name: "LinkedIn", href: "https://linkedin.com" },
-        { name: "Email", href: "mailto:alex.chen.dev@email.com" },
+        { name: "Email", href: "mailto:chauhanaman7000@gmail.com" },
         { name: "Resume", href: "#" },
       ],
     },
@@ -69,7 +69,7 @@ export function Footer() {
             <div className="flex items-center text-sm text-foreground/60">
               <span>Made with</span>
               <Heart className="h-4 w-4 mx-1 text-red-500 fill-current" />
-              <span>by Alex Chen</span>
+              <span>by Aman Chauhan</span>
             </div>
           </motion.div>
 
@@ -116,10 +116,10 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-foreground/70 text-sm">
-                © {currentYear} Alex Chen. All Rights Reserved.
+                © {currentYear} Aman Chauhan. All Rights Reserved.
               </p>
               <p className="text-foreground/60 text-xs mt-1">
-                Designed and developed with modern web technologies
+                Built with React, TypeScript and a lot of coffee ☕
               </p>
             </div>
 

@@ -14,11 +14,13 @@ interface Message {
 }
 
 export function AIChat() {
+  // Chat state - keeping track of messages
+  // Started with just one welcome message
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
       type: "bot",
-      content: "Hello! I'm Alex's AI assistant. Feel free to ask me anything about his skills, projects, or experience!",
+      content: "Hello! I'm Aman's AI assistant. Feel free to ask me anything about his skills, projects, or experience!",
       timestamp: new Date(),
     },
   ]);
@@ -26,22 +28,25 @@ export function AIChat() {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Some questions people might want to ask
   const suggestedQuestions = [
-    "What technologies does Alex know?",
-    "What is his most advanced project?",
+    "What technologies does Aman know?",
+    "What is his most recent project?",
     "How much experience does he have?",
-    "What makes Alex different from other developers?",
+    "What makes Aman different from other developers?",
   ];
 
+  // Simple bot responses - just hardcoded for now
+  // Maybe I'll make this smarter later with a real AI API
   const botResponses: Record<string, string> = {
-    "technologies": "Alex is proficient in React, TypeScript, Next.js, Three.js, Framer Motion, GSAP, TailwindCSS, and AI/ML integration. He has 4+ years of experience building modern web applications.",
-    "experience": "Alex has 4+ years of frontend development experience, having worked on 50+ projects ranging from simple landing pages to complex AI-powered dashboards and 3D interactive experiences.",
-    "advanced project": "His most advanced project is an AI-powered analytics dashboard that uses machine learning to provide real-time insights and predictive analytics, built with React, TypeScript, and custom AI integrations.",
-    "different": "Alex specializes in creating futuristic, AI-integrated web experiences. He combines traditional frontend skills with cutting-edge technologies like Three.js for 3D graphics and AI APIs for intelligent features.",
-    "skills": "Alex's core skills include React ecosystem, TypeScript, 3D graphics with Three.js, animation libraries (Framer Motion, GSAP), AI/ML integration, responsive design, and modern CSS frameworks.",
-    "projects": "Alex has built various projects including e-commerce platforms, real-time chat applications, 3D portfolios, AI dashboards, learning management systems, and productivity tools.",
-    "contact": "You can contact Alex through the contact form below, or connect with him on LinkedIn and GitHub. He's always open to discussing new opportunities!",
-    "default": "That's an interesting question! Alex is a passionate frontend developer who loves creating innovative web experiences. Feel free to ask about his skills, projects, or experience!",
+    "technologies": "Aman works with React, TypeScript, Next.js, TailwindCSS, and he's learning Three.js and AI APIs. He's been coding for about 3+ years now.",
+    "experience": "Aman has 3+ years of frontend development experience. He started with basic HTML/CSS and gradually moved to React and modern frameworks. Still learning new things every day!",
+    "advanced project": "His most recent project is this AI-themed portfolio you're looking at! He's also worked on some e-commerce sites and dashboard applications using React and Next.js.",
+    "different": "Aman likes to keep things simple but effective. He focuses on clean code, good user experience, and is always eager to learn new technologies. Currently exploring AI integration in web apps.",
+    "skills": "Aman's main skills are React, JavaScript, TypeScript, TailwindCSS, Next.js, and he's currently learning Three.js for 3D graphics and various AI APIs for smarter web applications.",
+    "projects": "Aman has built e-commerce platforms, portfolio websites, dashboard applications, and some smaller utility apps. He's always working on something new!",
+    "contact": "You can reach Aman through the contact form below, or email him directly at chauhanaman7000@gmail.com. He's always interested in new opportunities and collaborations!",
+    "default": "That's a great question! Aman is a frontend developer who enjoys building modern web applications. Feel free to ask about his skills, projects, or experience!",
   };
 
   const generateResponse = (userMessage: string): string => {
@@ -59,6 +64,7 @@ export function AIChat() {
   const handleSendMessage = async () => {
     if (!input.trim()) return;
 
+    // Create user message
     const userMessage: Message = {
       id: Date.now().toString(),
       type: "user",
@@ -70,7 +76,8 @@ export function AIChat() {
     setInput("");
     setIsTyping(true);
 
-    // Simulate AI thinking time
+    // Add some delay to make it feel more natural
+    // Random delay between 1-3 seconds like a real person typing
     setTimeout(() => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -219,7 +226,7 @@ export function AIChat() {
                     <Input
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
-                      placeholder="Ask me anything about Alex..."
+                      placeholder="Ask me anything about Aman..."
                       onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                       className="glass border-white/10"
                     />
