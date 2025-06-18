@@ -14,8 +14,9 @@ import { Footer } from "./components/Footer";
 
 function App() {
   useEffect(() => {
-    // Initialize GSAP animations or any other libraries here if needed
-    console.log("NeoFolio - AI Developer Portfolio Loaded");
+    // Just a simple console log to know the app loaded
+    // Maybe add some analytics or other startup code here later
+    console.log("Portfolio loaded successfully!");
   }, []);
 
   return (

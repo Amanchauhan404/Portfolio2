@@ -6,41 +6,42 @@ import { Badge } from "./ui/badge";
 export function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
+  // My skills organized by category - updated these based on what I actually know
   const skillCategories = [
     {
       title: "🧠 Languages",
       skills: [
-        { name: "JavaScript", level: 95, projects: ["E-commerce Platform", "AI Chat App", "3D Portfolio"] },
-        { name: "TypeScript", level: 90, projects: ["Dashboard Analytics", "Real-time Tracker"] },
-        { name: "HTML", level: 98, projects: ["Landing Pages", "Email Templates"] },
-        { name: "CSS", level: 92, projects: ["Animation Library", "Design System"] },
+        { name: "JavaScript", level: 85, projects: ["Portfolio Site", "Todo App", "Weather App"] },
+        { name: "TypeScript", level: 75, projects: ["This Portfolio", "Shopping Cart"] },
+        { name: "HTML", level: 90, projects: ["Various Websites", "Landing Pages"] },
+        { name: "CSS", level: 88, projects: ["Responsive Designs", "Animation Effects"] },
       ],
     },
     {
       title: "⚛️ Frameworks",
       skills: [
-        { name: "React", level: 95, projects: ["Social Media App", "E-learning Platform"] },
-        { name: "Next.js", level: 88, projects: ["SEO-optimized Sites", "Server-side Apps"] },
-        { name: "Vue.js", level: 75, projects: ["Admin Dashboard", "Component Library"] },
-        { name: "Svelte", level: 70, projects: ["Interactive Widgets", "Performance Demos"] },
+        { name: "React", level: 85, projects: ["This Portfolio", "E-commerce Site"] },
+        { name: "Next.js", level: 70, projects: ["Blog Website", "Landing Pages"] },
+        { name: "Vue.js", level: 60, projects: ["Small Projects", "Learning Demos"] },
+        { name: "Express.js", level: 65, projects: ["API Backends", "Simple Servers"] },
       ],
     },
     {
       title: "🎨 UI & Design",
       skills: [
-        { name: "Tailwind CSS", level: 95, projects: ["Design Systems", "Responsive Layouts"] },
-        { name: "Framer Motion", level: 90, projects: ["Animated Landing Pages", "Micro-interactions"] },
-        { name: "Three.js", level: 85, projects: ["3D Portfolios", "Interactive Experiences"] },
-        { name: "GSAP", level: 80, projects: ["Complex Animations", "Scroll Triggers"] },
+        { name: "Tailwind CSS", level: 80, projects: ["This Portfolio", "Responsive Sites"] },
+        { name: "Framer Motion", level: 70, projects: ["Portfolio Animations", "Page Transitions"] },
+        { name: "Three.js", level: 60, projects: ["Learning Projects", "This Portfolio"] },
+        { name: "Bootstrap", level: 75, projects: ["Quick Prototypes", "Client Projects"] },
       ],
     },
     {
       title: "🛠️ Tools & Others",
       skills: [
-        { name: "Git", level: 92, projects: ["Team Collaboration", "Open Source"] },
-        { name: "Docker", level: 78, projects: ["Development Environment", "Deployment"] },
-        { name: "AWS", level: 75, projects: ["Cloud Hosting", "Serverless Functions"] },
-        { name: "AI/ML APIs", level: 85, projects: ["ChatGPT Integration", "Image Generation"] },
+        { name: "Git", level: 80, projects: ["Version Control", "GitHub Projects"] },
+        { name: "Node.js", level: 70, projects: ["Backend APIs", "Build Tools"] },
+        { name: "MongoDB", level: 65, projects: ["Database Projects", "CRUD Apps"] },
+        { name: "AI APIs", level: 50, projects: ["This Chat Feature", "Learning Projects"] },
       ],
     },
   ];
@@ -138,10 +139,10 @@ export function Skills() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { label: "Projects Completed", value: "50+" },
-            { label: "Lines of Code", value: "100K+" },
-            { label: "Coffee Cups", value: "2000+" },
-            { label: "Happy Clients", value: "25+" },
+            { label: "Projects Completed", value: "25+" },
+            { label: "Lines of Code", value: "50K+" },
+            { label: "Coffee Cups", value: "1000+" },
+            { label: "Learning Hours", value: "500+" },
           ].map((stat, index) => (
             <Card key={stat.label} className="glass text-center">
               <CardContent className="p-4">

@@ -76,11 +76,13 @@ function FloatingCubes() {
     return cubeData;
   }, []);
 
+  // Animate the cubes - each one rotates at slightly different speeds
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.1;
+      groupRef.current.rotation.y += delta * 0.1; // Rotate the whole group
+      // Make each cube spin individually too
       groupRef.current.children.forEach((child, index) => {
-        child.rotation.x += delta * (0.5 + index * 0.1);
+        child.rotation.x += delta * (0.5 + index * 0.1); // Different speeds
         child.rotation.y += delta * (0.3 + index * 0.05);
       });
     }

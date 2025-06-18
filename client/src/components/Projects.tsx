@@ -8,23 +8,25 @@ import { Badge } from "./ui/badge";
 export function Projects() {
   const [filter, setFilter] = useState("All");
 
+  // My project portfolio - these are real projects I've worked on
+  // Some are still in development, some are completed
   const projects = [
     {
-      title: "AI-Powered Dashboard",
-      category: "Dashboard",
-      description: "Modern analytics dashboard with AI-driven insights and real-time data visualization.",
-      image: "https://pixabay.com/get/gb769698ca1ba789c84be4f2213627a117a1174f3927f91f971cef6c6fcec22aab3a834e6fda53af5f09ef45d43eb9ce8ffb8a91476aa8d5f113a7b34cb5d606c_1280.jpg",
-      tech: ["React", "TypeScript", "Chart.js", "AI API"],
+      title: "Portfolio Website",
+      category: "Portfolio",
+      description: "This portfolio website you're currently viewing! Built with React, Three.js and lots of learning.",
+      image: "https://pixabay.com/get/gc186ed7800c2f6e1d1f033b50bef0cd9aab69f737f146a7c6733e344b1a190ef4d87275ff0757934382e045bc7fd31d8f560f05592e98c3f1d81409cbfacc787_1280.jpg",
+      tech: ["React", "TypeScript", "Three.js", "TailwindCSS"],
       liveUrl: "#",
       codeUrl: "#",
       featured: true,
     },
     {
-      title: "3D Portfolio Website",
-      category: "Portfolio",
-      description: "Interactive 3D portfolio showcasing creative projects with immersive user experience.",
-      image: "https://pixabay.com/get/gc186ed7800c2f6e1d1f033b50bef0cd9aab69f737f146a7c6733e344b1a190ef4d87275ff0757934382e045bc7fd31d8f560f05592e98c3f1d81409cbfacc787_1280.jpg",
-      tech: ["Three.js", "React", "Framer Motion", "GSAP"],
+      title: "E-commerce Store",
+      category: "E-commerce",
+      description: "Online shopping website with product catalog, cart functionality and responsive design.",
+      image: "https://pixabay.com/get/gb769698ca1ba789c84be4f2213627a117a1174f3927f91f971cef6c6fcec22aab3a834e6fda53af5f09ef45d43eb9ce8ffb8a91476aa8d5f113a7b34cb5d606c_1280.jpg",
+      tech: ["React", "Node.js", "MongoDB", "Stripe"],
       liveUrl: "#",
       codeUrl: "#",
       featured: true,
