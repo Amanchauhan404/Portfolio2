@@ -1,0 +1,144 @@
+import { motion } from "framer-motion";
+import { Code, Rocket, Zap, Brain } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
+
+export function About() {
+  const timeline = [
+    {
+      year: "2020",
+      title: "Started Coding Journey",
+      description: "Fell in love with creating digital experiences",
+      icon: <Code className="h-5 w-5" />,
+    },
+    {
+      year: "2021",
+      title: "First React Project",
+      description: "Built my first SPA and discovered component-based architecture",
+      icon: <Rocket className="h-5 w-5" />,
+    },
+    {
+      year: "2022",
+      title: "Mastered Modern Stack",
+      description: "Deep dive into TypeScript, Next.js, and Three.js",
+      icon: <Zap className="h-5 w-5" />,
+    },
+    {
+      year: "2023",
+      title: "AI Integration Expert",
+      description: "Specialized in integrating AI/ML into web applications",
+      icon: <Brain className="h-5 w-5" />,
+    },
+  ];
+
+  return (
+    <section id="about" className="py-20 relative">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 neon-text">
+            About Me
+          </h2>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            Passionate frontend developer with a love for creating immersive digital experiences
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Profile Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <Card className="glass">
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-6 mb-6">
+                  <div className="w-24 h-24 rounded-full overflow-hidden glass border-4 border-primary/50">
+                    <img
+                      src="https://pixabay.com/get/gb81f147295c2c0513c2eb638f34480995d929b6ea276a8cee5911bd27edc265077b663d230ab6bfcfacab08b7f2964e3f904a76c17a1d909cdcad2118ea06d18_1280.jpg"
+                      alt="Alex Chen"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary">Alex Chen</h3>
+                    <p className="text-foreground/80">Frontend Developer & AI Enthusiast</p>
+                  </div>
+                </div>
+                
+                <p className="text-foreground/80 leading-relaxed">
+                  I'm a passionate frontend developer who loves pushing the boundaries of what's possible on the web. 
+                  My journey started with curiosity about how websites work, and it evolved into a deep fascination 
+                  with creating immersive, AI-powered user experiences.
+                </p>
+                
+                <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-primary font-semibold">Location:</span>
+                    <p className="text-foreground/80">San Francisco, CA</p>
+                  </div>
+                  <div>
+                    <span className="text-primary font-semibold">Experience:</span>
+                    <p className="text-foreground/80">4+ Years</p>
+                  </div>
+                  <div>
+                    <span className="text-primary font-semibold">Specialization:</span>
+                    <p className="text-foreground/80">React & Three.js</p>
+                  </div>
+                  <div>
+                    <span className="text-primary font-semibold">Passion:</span>
+                    <p className="text-foreground/80">AI Integration</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Timeline Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">My Journey</h3>
+            
+            <div className="space-y-6">
+              {timeline.map((item, index) => (
+                <motion.div
+                  key={item.year}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border border-primary/50">
+                    {item.icon}
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="text-primary font-bold">{item.year}</span>
+                      <div className="flex-1 h-px bg-primary/30"></div>
+                    </div>
+                    <h4 className="font-semibold text-lg mb-1">{item.title}</h4>
+                    <p className="text-foreground/70 text-sm">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
